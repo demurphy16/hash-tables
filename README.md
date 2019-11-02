@@ -31,6 +31,22 @@ A good function is supposed to be:
 2. Fast 
 3. Deterministic(same input yields the same output)
 
+Example of what we don't want!
+```
+function slowHash(key) {
+  for (let i = 0; i < 1000; i++) {
+    console.log('my slow hash');
+  }
+  return key[0].charCodeAt(0);
+}
+```
+
+## Dealing with Collision
+- Even with a large array and a great hash function, collisions are inevitable
+- There are many strategies for dealing with collisions, but we'll focus on two:
+1. Separate Chaining 
+2. Linear Probing 
+
 
 
 
