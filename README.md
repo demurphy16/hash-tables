@@ -29,7 +29,7 @@ Hashing functions(conceptually):
 A good function is supposed to be:
 1. Doesn't cluster outputs at specific indices
 2. Fast 
-3. Deterministic(same input yields the same output)
+3. Deterministic(**same input yields the same output**)
 
 Example of what we don't want!
 ```
@@ -47,6 +47,11 @@ function slowHash(key) {
 1. Separate Chaining 
 2. Linear Probing 
 
+
+
+[Map Object JS MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
 
 
 
