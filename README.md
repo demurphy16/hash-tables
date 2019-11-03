@@ -11,6 +11,32 @@ Built-in in almost every programming language.
 
 `{}`
 
+```javascript
+let object = {} 
+object['one'] = 1;
+object['two'] = 2;
+object['three'] = 3;
+
+
+// show the values stored
+
+function showValue(key) {
+    if (typeof key === 'string') {
+      if (object.hasOwnProperty(key)) {
+        return `key is: ${key}, value is: ${object[key]}`;
+      } else {
+        return `It doesn't exist`
+      }
+    } 
+    return `a key can only be a string`
+    
+}
+
+showValue('onetwo') // => it doesn't exist
+showValue('one') // => key is: one, value is: 1
+showValue(1) // => a key can only be a string
+```
+
 A hash table is used to store **key-value** pairs. Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values!
 
 Because of their speed and time complexity, hash tables are very common.
@@ -21,6 +47,8 @@ To implement a hash table, we will be using an array.
 
 In order to look up values by key, we need a way to convert keys into valied array indices. A function that performs this task is called a **hash function**.
 
+
+
 Hashing functions(conceptually):
   
 * passing the same string and always return the **same** output, always.
@@ -30,22 +58,6 @@ A good function is supposed to be:
 1. Doesn't cluster outputs at specific indices
 2. Fast 
 3. Deterministic(**same input yields the same output**)
-
-Example of what we don't want!
-```
-function slowHash(key) {
-  for (let i = 0; i < 1000; i++) {
-    console.log('my slow hash');
-  }
-  return key[0].charCodeAt(0);
-}
-```
-
-## Dealing with Collision
-- Even with a large array and a great hash function, collisions are inevitable
-- There are many strategies for dealing with collisions, but we'll focus on two:
-1. Separate Chaining 
-2. Linear Probing 
 
 
 
