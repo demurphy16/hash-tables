@@ -71,9 +71,14 @@ The Map object holds key-value pairs and remembers the original insertion order 
 3. Stores the key-value pair in the hash table array via separate chaining
 
 
+## Cryptographic hashing
+
+![image from ios](https://media.git.generalassemb.ly/user/19642/files/56eef480-fe6a-11e9-959f-2d1fbe1f2f83)
 
 
+## Big O of Hash tables
 
+![img_1536](https://media.git.generalassemb.ly/user/19642/files/6f5f0f00-fe6a-11e9-84a4-5d42c0c73a75)
 
 
 
