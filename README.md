@@ -71,17 +71,25 @@ The Map object holds key-value pairs and remembers the original insertion order 
 3. Stores the key-value pair in the hash table array via separate chaining
 
 
+## Big O of Hash tables
+Fantastic time complexity! However, this does depend on how good your hash function is.. How fast is it and how evenly does it distribute things, which would minimize the number of collisions. This is why it is often best to use built in hash function instead of writing your own. 
+
+![Big O](https://media.git.generalassemb.ly/user/19642/files/56eef480-fe6a-11e9-959f-2d1fbe1f2f83)
+
+
+
 ## Cryptographic hashing
 
-![image from ios](https://media.git.generalassemb.ly/user/19642/files/56eef480-fe6a-11e9-959f-2d1fbe1f2f83)
+![crypto-hash](https://media.git.generalassemb.ly/user/19642/files/6f5f0f00-fe6a-11e9-84a4-5d42c0c73a75)
+
+Blockchain technology use a special branch of hashing that involved cryptography. If you are interested in the area you can pretty easily implement some of these complicated algorithms into your applications with these packages.
+
+https://www.npmjs.com/package/md5
 
 
-## Big O of Hash tables
+https://www.npmjs.com/package/js-sha256
 
-![img_1536](https://media.git.generalassemb.ly/user/19642/files/6f5f0f00-fe6a-11e9-84a4-5d42c0c73a75)
-
-
-
+These are just two popular examples of hashing algorithms.
 
 
 
