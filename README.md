@@ -91,6 +91,13 @@ https://www.npmjs.com/package/js-sha256
 
 These are just two popular examples of hashing algorithms.
 
+## Auth 
+Another place we see hashing is with Authentication.
+We are going to talk about this process in more detail this week. One approach to Auth is to use json web tokens (JWT) to hash you data. You can get familiar with the concept here if you're interested.
+https://blog.angular-university.io/angular-jwt/
+
+
+
 
 
 
