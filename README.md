@@ -77,7 +77,7 @@ Fantastic time complexity! However, this does depend on how good your hash funct
 
 ## Cryptographic hashing
 
-![crypto-hash](https://media.git.generalassemb.ly/user/19642/files/6f5f0f00-fe6a-11e9-84a4-5d42c0c73a75)
+![crypto-hash](https://media.git.generalassemb.ly/user/19642/files/c6d3ac80-ff48-11e9-8940-37646088a9a1)
 
 Blockchain technology use a special branch of hashing that involved cryptography. If you are interested in the area you can pretty easily implement some of these complicated algorithms into your applications with these packages.
 
