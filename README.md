@@ -79,18 +79,18 @@ Fantastic time complexity! However, this does depend on how good your hash funct
 
 ![crypto-hash](https://media.git.generalassemb.ly/user/19642/files/c6d3ac80-ff48-11e9-8940-37646088a9a1)
 
-Blockchain technology use a special branch of hashing that involved cryptography. If you are interested in the area you can pretty easily implement some of these complicated algorithms into your applications with these packages.
+Blockchain technology use a special branch of hashing that involved cryptography. If you are interested in this area you can use some pretty crazy hash algorithms in your applications with these npm packages.
 
 https://www.npmjs.com/package/md5
 
 
 https://www.npmjs.com/package/js-sha256
 
-These are just two popular examples of hashing algorithms.
+These are just two popular examples, but there are many more.
 
 ## Auth 
 Another place we see hashing is with Authentication.
-We are going to talk about this process in more detail this week. One approach to Auth is to use bcrypt or json web tokens (JWT) to hash you data. You can get familiar with the concept here if you're interested.
+We are going to talk about this process in more detail today! One approach to Auth is to use bcrypt or json web tokens (JWT) to hash your data. You can get familiar with the concept here if you're interested.
 [jwt](https://blog.angular-university.io/angular-jwt/).
 [password hashing](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
 
