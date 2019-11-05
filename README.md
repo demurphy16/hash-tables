@@ -42,7 +42,7 @@ The Map object holds key-value pairs and remembers the original insertion order 
 
 ---
 
-A hash table is used to store **key-value** pairs. Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values!
+A hash table is a data structure that stores **key-value** pairs. Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values! To store a piece of data in a hash table, a key is mapped to a number in a range of 0 through the hash table size, using a *hash function*.
 Because of their speed and time complexity, **hash tables** are very common.
 
 In order to look up values by key, we need a way to convert keys into valid array indices. A function that performs this task is called a **hash function**.
@@ -56,11 +56,11 @@ In order to look up values by key, we need a way to convert keys into valid arra
 * two strings should not produce the same value. 
 
 ### A good function:
+
 1. Fast 
 2. Doesn't cluster outputs at specific indices, it should map different strings to different numbers
 3. Deterministic(**same input yields the same output**) or consistent.
 
-Hashing is a common technique 
 
 ## Set/ Get
 1. Accepts a key and a value 
@@ -90,49 +90,30 @@ These are just two popular examples of hashing algorithms.
 
 ## Auth 
 Another place we see hashing is with Authentication.
-We are going to talk about this process in more detail this week. One approach to Auth is to use json web tokens (JWT) to hash you data. You can get familiar with the concept here if you're interested.
-https://blog.angular-university.io/angular-jwt/
+We are going to talk about this process in more detail this week. One approach to Auth is to use bcrypt or json web tokens (JWT) to hash you data. You can get familiar with the concept here if you're interested.
+[jwt](https://blog.angular-university.io/angular-jwt/).
+[password hashing](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
+
+### Other Applications:
+
+1. Caching - refers to storing the result of an operation so that future request return faster. 
+
+  - Imagine a database or a server that handles a lot of requests at the same time, the more it handles, the slower it becomes. The cache works as a hash table. If we need to access data, the browser can pull it from the cache instead of the original server because it has stored the user’s activity. It first checks the cache, and if the requested data is found, it's called a **cache hit**. If the requested data isn't found in the cache -- a situation known as a **cache miss** -- the browser makes the request and saves the data into the cache for future use. 
+
+  ```python
+  cache = {}
+  
+  def get_page(url):
+    if cache.get(url):
+      return cache[url]
+    else 
+      data = get_data_from_server(url)
+      cache[url] = data
+      return data
+  ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+2. Hash functions are used in various algorithms to make their computing faster
 
 # Hash Tables Exercise
 
