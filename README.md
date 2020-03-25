@@ -70,6 +70,14 @@ In order to look up values by key, we need a way to convert keys into valid arra
 3. Stores the key-value pair in the hash table array via separate chaining
 
 
+## Collision
+
+Collision happens when a hashed key ends up matching the hash of a different key. This would mean that we would end up putting the value in our array at the same index as another value. There are several different ways to address this issue. Open addressing involves find a new index that is available. Today, we will be looking at closed addressing which is a technique that involves storing multiple value at a single index. While less efficient, we are not limited by the amount of keys that we can store.
+
+#### Closed Addressing
+
+![](https://he-s3.s3.amazonaws.com/media/uploads/0e2c706.png)
+
 ## Big O of Hash tables
 Fantastic time complexity! However, this does depend on how good your hash function is.. How fast is it and how evenly does it distribute things, which would minimize the number of collisions. This is why it is often best to use built in hash function instead of writing your own. 
 
@@ -116,6 +124,10 @@ We are going to talk about this process in more detail later! One approach to Au
 
 
 2. Hash functions are used in various algorithms to make their computing faster
+
+# Initial Table Size
+
+If you know how many keys you expect to have in an object, your hash table should be an array with 1.3 times the expected number of keys rounded up to the next prime number. [- UCSD](http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-8.html)
 
 # Hash Tables Exercise
 
