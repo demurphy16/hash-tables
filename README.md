@@ -92,7 +92,7 @@ These are just two popular examples, but there are many more.
 
 ## Auth 
 Another place we see hashing is with Authentication.
-We are going to talk about this process in more detail today! One approach to Auth is to use bcrypt or json web tokens (JWT) to hash your data. You can get familiar with the concept here if you're interested.
+We are going to talk about this process in more detail later! One approach to Auth is to use bcrypt or json web tokens (JWT) to hash your data. You can get familiar with the concept here if you're interested.
 [jwt](https://blog.angular-university.io/angular-jwt/).
 [password hashing](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
 
