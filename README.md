@@ -1,4 +1,4 @@
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) SOFTWARE ENGINEERING IMMERSIVE
 
 ![](https://media.giphy.com/media/U1rlk8zdcAwbm/giphy.gif)
 
