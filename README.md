@@ -10,6 +10,36 @@
 1. Define a hashing algorithm
 1. Understand collisions and strategies for accounting for them
 
+`{}`
+
+```javascript
+let object = {} 
+object['one'] = 1;
+object['two'] = 2;
+object['three'] = 3;
+
+
+// show the values stored
+
+function showValue(key) {
+    if (typeof key === 'string') {
+      if (object.hasOwnProperty(key)) {
+        return `key is: ${key}, value is: ${object[key]}`;
+      } else {
+        return `It doesn't exist`
+      }
+    } 
+    return `a key can only be a string`
+    
+}
+
+showValue('onetwo') // => it doesn't exist
+showValue('one') // => key is: one, value is: 1
+showValue(1) // => a key can only be a string
+```
+[Map Object JS MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+
 ### Introducing Hash Tables
 
 What *are* hash tables?
@@ -50,7 +80,7 @@ In order to look up values by the hash key, we need a way to convert the keys in
 
 A hash function takes a string as an input, and converts it to an integer, then remaps that integer into the array.
 
-For example... Suppose you work at a grocery store, and you want to look up the price of the different products. Imagine they are not alphabetized, which means that, if you were to find the product, it will take you O(n) runtime. Now imagine products were in alphabetical order; applying the binary search will take O(log n) runtime. 
+- Suppose you work at a grocery store, and you want to look up the price of the different products. Imagine they are not alphabetized, which means that, if you were to find the product, it will take you O(n) runtime. Now imagine products were in alphabetical order; applying the binary search will take O(log n) runtime. 
 
 What if there was an algorithm or a program where you can just feed the name of the product and return you the price instantly, O(1) time? Wouldn't it be really efficient and time-saving? 
 
