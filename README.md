@@ -2,69 +2,72 @@
 
 ![](https://media.giphy.com/media/U1rlk8zdcAwbm/giphy.gif)
 
-# Hash tables(hash maps)
+## Data Structures Cont'd: Hash Tables, AKA Hash Maps
 
-###
-1. Define what a hash table is 
-2. Define what a hashing algorithm
-3. Collisions and strategies for handling them.
+### Lesson Objectives
 
-Built-in in almost every programming language. 
+1. Define a hash table 
+1. Define a hashing algorithm
+1. Understand collisions and strategies for accounting for them
 
-`{}`
+### Introducing Hash Tables
 
-```javascript
-let object = {} 
-object['one'] = 1;
-object['two'] = 2;
-object['three'] = 3;
+What *are* hash tables?
 
-
-// show the values stored
-
-function showValue(key) {
-    if (typeof key === 'string') {
-      if (object.hasOwnProperty(key)) {
-        return `key is: ${key}, value is: ${object[key]}`;
-      } else {
-        return `It doesn't exist`
-      }
-    } 
-    return `a key can only be a string`
+<details><summary>Reveal Answer</summary>
     
-}
+<br>
 
-showValue('onetwo') // => it doesn't exist
-showValue('one') // => key is: one, value is: 1
-showValue(1) // => a key can only be a string
-```
-[Map Object JS MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- An unordered, associative array abstract data type which maps **keys** to **values** for efficient lookup.
+- Utilizes a **hash function** to generate an **index**, or hash code, with an associated bucket, or value.
 
-The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
+</details>
 
----
+Why are hash tables useful?
 
-A hash table is a data structure that stores **key-value** pairs. Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, and removing values! To store a piece of data in a hash table, a key is mapped to a number in a range of 0 through the hash table size, using a *hash function*.
-Because of their speed and time complexity, **hash tables** are very common.
+<details><summary>Reveal Answer</summary>
+    
+<br>
+    
+- Hash tables are incredibly efficient and are built-in with almost every programming language.
+- They are "possibly the **most useful data structure for interviews**– in fact, one technique I often tell people is that, for any problem in an interview, have a hash table at the top of your mind for a solution." (Gayle Laakmann McDowell, Author of Cracking the Coding Interview)
 
-In order to look up values by key, we need a way to convert keys into valid array indices. A function that performs this task is called a **hash function**.
+</details>
 
-* **Example**: Suppose you work at a grocery store, and you want to look up the price of the different products. Imagine they are not alphabetizied, which means that if you were to find the product, you are looking for it will take you O(n) time. Let's say, products were in alphabetic order and applying binary search will take O(logn) time. What if there was an algorithm or a program where you can just feed the name of the product and return you the price instantly, O(1) time? Wouldn't it be really efficient and time-saving? The answer is yes, this is where hash functions come in.
+### Hashes
 
-**Hashing functions(conceptually):**
+Unlike arrays, hash tables are extremely efficient for finding values, adding new values, and removing values. To store a piece of data in a hash table, a key is mapped to a number in a range of 0 through the hash table size, using the hash function.
 
-* in technical terms, we say that a hash function "maps string to numbers".
-* passing the same string and always return the **same** output, always.
-* two strings should not produce the same value. 
+### Hash Functions
 
-### A good function:
+In order to look up values by the hash key, we need a way to convert the keys into valid array indices. The function that performs this task is called a **hash function**.
 
-1. Fast 
-2. Doesn't cluster outputs at specific indices, it should map different strings to different numbers
-3. Deterministic(**same input yields the same output**) or consistent.
+A hash function takes a string as an input, and converts it to an integer, then remaps that integer into the array.
 
+For example... Suppose you work at a grocery store, and you want to look up the price of the different products. Imagine they are not alphabetized, which means that, if you were to find the product, it will take you O(n) runtime. Now imagine products were in alphabetical order; applying the binary search will take O(log n) runtime. 
+
+What if there was an algorithm or a program where you can just feed the name of the product and return you the price instantly, O(1) time? Wouldn't it be really efficient and time-saving? 
+
+Yes– this is where hash functions are helpful.
+
+We map from the key, to the hash code, then to the index.
+
+#### Conceptually...
+
+In technical terms, we say that a hash function "maps strings to numbers." Two problems: 
+
+1. There is an infinite number of strings, but a finite number of hash codes, so two different strings could theoretically have the same hash code.
+1. Although there's a finite number of hash codes, the indexed array will always be smaller, so two items with different hash codes can be mapped to the same index.
+
+#### A Good Hash Function...
+
+1. is fast. 
+1. doesn't map different strings to the same hash codes.
+2. doesn't cluster hash code outputs at specific indices.
+3. is deterministic (**same input yields the same output**) or consistent.
 
 ## Set/ Get
+
 1. Accepts a key and a value 
 2. Hashes the key
 3. Stores the key-value pair in the hash table array via separate chaining
@@ -78,7 +81,7 @@ Collision happens when a hashed key ends up matching the hash of a different key
 
 ![](https://he-s3.s3.amazonaws.com/media/uploads/0e2c706.png)
 
-## Big O of Hash tables
+## Big O of Hash Tables
 Fantastic time complexity! However, this does depend on how good your hash function is.. How fast is it and how evenly does it distribute things, which would minimize the number of collisions. This is why it is often best to use built in hash function instead of writing your own. 
 
 ![Big O](https://media.git.generalassemb.ly/user/19642/files/56eef480-fe6a-11e9-959f-2d1fbe1f2f83)
@@ -98,7 +101,8 @@ https://www.npmjs.com/package/js-sha256
 
 These are just two popular examples, but there are many more.
 
-## Auth 
+## Authentication
+
 Another place we see hashing is with Authentication.
 We are going to talk about this process in more detail later! One approach to Auth is to use bcrypt or json web tokens (JWT) to hash your data. You can get familiar with the concept here if you're interested.
 [jwt](https://blog.angular-university.io/angular-jwt/).
@@ -106,7 +110,7 @@ We are going to talk about this process in more detail later! One approach to Au
 
 ### Other Applications:
 
-1. Caching - refers to storing the result of an operation so that future request return faster. 
+1. Cacheing - refers to storing the result of an operation so that future request return faster. 
 
   - Imagine a database or a server that handles a lot of requests at the same time, the more it handles, the slower it becomes. The cache works as a hash table. If we need to access data, the browser can pull it from the cache instead of the original server because it has stored the user’s activity. It first checks the cache, and if the requested data is found, it's called a **cache hit**. If the requested data isn't found in the cache -- a situation known as a **cache miss** -- the browser makes the request and saves the data into the cache for future use. 
 
@@ -129,7 +133,7 @@ We are going to talk about this process in more detail later! One approach to Au
 
 If you know how many keys you expect to have in an object, your hash table should be an array with 1.3 times the expected number of keys rounded up to the next prime number. [- UCSD](http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-8.html)
 
-# Hash Tables Exercise
+### Time for an exercise!
 
 Complete the methods and classes defined in `HashTable.js` according to the specifications in the comments.
 
