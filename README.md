@@ -130,7 +130,7 @@ The biggest benefit of hash tables, time complexity!
 
 That said, this does depend on how good your hash function is... How fast is it and how evenly does it distribute things, which would minimize the number of collisions, etc.
 
-![Big O](https://media.git.generalassemb.ly/user/19642/files/56eef480-fe6a-11e9-959f-2d1fbe1f2f83
+![Big O](https://media.git.generalassemb.ly/user/19642/files/56eef480-fe6a-11e9-959f-2d1fbe1f2f83)
 
 <br> 
 
