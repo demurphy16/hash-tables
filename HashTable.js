@@ -33,7 +33,7 @@ class HashTable {
     // if not, return -1
   }
   
-   delete(key) {
+  delete(key) {
     // lookup the key (i.e. hash it to get an index)
     // if the key is, in fact, in the array, delete that key value pair and return it
     // if the key wasn't found return -1
