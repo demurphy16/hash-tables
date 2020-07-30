@@ -26,17 +26,17 @@ class HashTable {
     // for the convenience of the user, you might wish to return the key value pair, or you can just return true
   }
 
-  delete(key) {
-    // lookup the key (i.e. hash it to get an index)
-    // if the key is, in fact, in the array, delete that key value pair and return it
-    // if the key wasn't found return -1
-  }
-
   search(key) {
     // hash key to get index
     // search the array at the index
     // if the key is found, return the value
     // if not, return -1
+  }
+  
+   delete(key) {
+    // lookup the key (i.e. hash it to get an index)
+    // if the key is, in fact, in the array, delete that key value pair and return it
+    // if the key wasn't found return -1
   }
 
 }
