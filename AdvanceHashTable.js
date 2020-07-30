@@ -57,6 +57,8 @@ class HashTable {
       return null
     }
 
+    this.entries -= 1
+
     for (let i = 0; i < this.table[index].length; i += 1) {
       if (this.table[index][i][0] === key) {
         return this.table[index].splice(i, i + 1)
