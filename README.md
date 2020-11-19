@@ -13,6 +13,7 @@
 `{}`
 
 [Map Object JS MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+[wikipedia article on Hash Tables](https://en.wikipedia.org/wiki/Hash_table)
 
 
 ### Introducing Hash Tables
