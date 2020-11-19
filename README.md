@@ -12,31 +12,6 @@
 
 `{}`
 
-```javascript
-let object = {} 
-object['one'] = 1;
-object['two'] = 2;
-object['three'] = 3;
-
-
-// show the values stored
-
-function showValue(key) {
-    if (typeof key === 'string') {
-      if (object.hasOwnProperty(key)) {
-        return `key is: ${key}, value is: ${object[key]}`;
-      } else {
-        return `It doesn't exist`
-      }
-    } 
-    return `a key can only be a string`
-    
-}
-
-showValue('onetwo') // => it doesn't exist
-showValue('one') // => key is: one, value is: 1
-showValue(1) // => a key can only be a string
-```
 [Map Object JS MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 
 
